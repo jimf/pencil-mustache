@@ -1,0 +1,41 @@
+{
+  "name": "pencil-mustache",
+  "version": "1.0.0",
+  "description": "Simple mustache-style string interpolation",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "istanbul cover test/*.js",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "lint": "jshint .",
+    "test": "tape test/*.js",
+    "validate": "npm run lint && npm test && npm run coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimf/pencil-mustache"
+  },
+  "keywords": [
+    "mustache",
+    "template",
+    "string",
+    "interpolation",
+    "factory",
+    "util",
+    "utility"
+  ],
+  "author": "Jim Fitzpatrick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimf/pencil-mustache/issues"
+  },
+  "homepage": "https://github.com/jimf/pencil-mustache",
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.14",
+    "jshint": "^2.7.0",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "xml-escape": "^1.0.0"
+  }
+}
