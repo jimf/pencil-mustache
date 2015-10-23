@@ -54,6 +54,26 @@ test('{{ escaped strings }}', function(assert) {
             input: '{{foo}}',
             context: { foo: 1 },
             expected: '1'
+        },
+        {
+            input: '{{foo}}',
+            context: { foo: undefined },
+            expected: ''
+        },
+        {
+            input: '{{foo}}',
+            context: { foo: null },
+            expected: ''
+        },
+        {
+            input: '{{foo}}',
+            context: { foo: false },
+            expected: 'false'
+        },
+        {
+            input: '{{foo}}',
+            context: { foo: true },
+            expected: 'true'
         }
     ];
 
@@ -118,6 +138,26 @@ test('{{{ unescaped strings }}}', function(assert) {
             input: '{{{foo}}}',
             context: { foo: 1 },
             expected: '1'
+        },
+        {
+            input: '{{{foo}}}',
+            context: { foo: undefined },
+            expected: ''
+        },
+        {
+            input: '{{{foo}}}',
+            context: { foo: null },
+            expected: ''
+        },
+        {
+            input: '{{{foo}}}',
+            context: { foo: false },
+            expected: 'false'
+        },
+        {
+            input: '{{{foo}}}',
+            context: { foo: true },
+            expected: 'true'
         }
     ];
 
