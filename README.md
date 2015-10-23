@@ -61,6 +61,14 @@ var mustache = require('pencil-mustache'),
 document.querySelector('.my-target').innerHtml = template(context);
 ```
 
+## Changelog
+
+### 1.1.0
+- Changed: replace `undefined` and `null` with empty string
+
+### 1.0.0
+- Initial release
+
 ## License
 
 MIT
